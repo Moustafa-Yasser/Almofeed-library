@@ -1,0 +1,903 @@
+/* Start global attribute */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-main-color: #009688;
+    --background-Secondary-color: #b9e8e3;
+    --main-color: #ffffff;
+    --Secondary-color: #06877b;
+}
+
+*::selection {
+    background-color: #0e786f;
+    color: white;
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+    color: var(--main-color);
+    background-color: #b9e8e3;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+
+/* End global attribute */
+
+
+/* Start Media  */
+
+@media (max-width: 3000px) {
+    h1 {
+        position: absolute;
+        top: 150px;
+        right: 40%;
+    }
+    h1+p {
+        position: absolute;
+        top: 270px;
+        right: 43%;
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        right: 20%;
+    }
+    input#search {
+        width: 1300px;
+    }
+    .container.book {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        column-gap: 45px;
+        row-gap: 95px;
+    }
+}
+
+@media (max-width: 1800px) {
+    h1 {
+        position: absolute;
+        top: 150px;
+        right: 40%;
+    }
+    h1+p {
+        position: absolute;
+        top: 270px;
+        right: 43%;
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        right: 20%;
+    }
+    input#search {
+        width: 1000px;
+    }
+    .container.book {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 45px;
+        row-gap: 95px;
+    }
+}
+
+@media ( max-width: 1350px) {
+    h1 {
+        position: absolute;
+        top: 150px;
+        right: 30%;
+    }
+    h1+p {
+        position: absolute;
+        top: 270px;
+        right: 33%;
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        right: 15%;
+    }
+    input#search {
+        width: 700px;
+    }
+    .container.book {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 45px;
+        row-gap: 95px;
+    }
+}
+
+@media (max-width: 1140px) {
+    h1 {
+        position: absolute;
+        right: 29%;
+    }
+    h1+p {
+        position: absolute;
+        right: 33%;
+    }
+    form {
+        position: absolute;
+        top: 45%;
+        right: 15%;
+    }
+    input#search {
+        width: 600px;
+    }
+    .container.book {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 45px;
+        row-gap: 95px;
+    }
+}
+
+@media (max-width: 770px) {
+    .logo {
+        font-size: 20px !important;
+    }
+    nav a {
+        font-size: 20px !important;
+    }
+    h1 {
+        position: absolute;
+        top: 150px;
+        right: 20%;
+    }
+    h1+p {
+        position: absolute;
+        top: 270px;
+        right: 28%;
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        right: 13%;
+    }
+    input#search {
+        width: 420px;
+    }
+    .container.book {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        column-gap: 45px;
+        row-gap: 95px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 20px !important;
+    }
+    nav a {
+        font-size: 20px !important;
+    }
+    h1 {
+        position: absolute;
+        top: 400px;
+        right: 30%;
+    }
+    h1+p {
+        position: absolute;
+        top: 510px;
+        right: 35%;
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        right: 15%;
+    }
+    input#search {
+        width: 700px;
+    }
+    .container.book {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 45px;
+        row-gap: 95px;
+        justify-content: center;
+    }
+}
+
+
+/* End Media  */
+
+
+/* Start Header and nav  */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    background-color: #06877b;
+    border-radius: 5px;
+    right: 0px;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: "Lalezar", cursive;
+    font-size: 35px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--background-main-color);
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Lalezar", cursive;
+    margin-left: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--background-main-color);
+    transition-duration: 0.1s;
+}
+
+nav a:hover {
+    background-color: #0e786f;
+    border-bottom: 2px solid #ffffff;
+    color: white;
+}
+
+
+/* End Header and nav  */
+
+
+/* Start Landing & Home page  */
+
+.landing {
+    background-color: var(--background-main-color);
+    height: 100vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: "Tajawal", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h1+p {
+    font-family: "Tajawal", sans-serif;
+    margin-top: 10px;
+}
+
+input#search {
+    outline: none;
+    border: none;
+    padding: 20px 20px 20px 100px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--background-main-color);
+    font-family: "Cairo", sans-serif;
+    position: relative;
+    top: 40px;
+}
+
+input.search-submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    background-color: var(--background-main-color);
+    font-family: "Tajawal", sans-serif;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+
+.Button-search {
+    background-color: #0c3d38;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    width: 105px;
+    height: 45px;
+    border-radius: 6px;
+}
+
+.fa-magnifying-glass:before,
+.fa-search:before {
+    content: "\f002";
+    font-size: 30px;
+    color: var(--background-main-color);
+    position: absolute;
+    left: 70px;
+    top: 10px;
+}
+
+
+/* End Landing & Home page  */
+
+
+/* Start main  */
+
+.container.book {
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Tajawal", sans-serif;
+    color: var(--main-color);
+    background-color: var(--background-Secondary-color);
+    border-radius: 10px;
+    margin-top: 60px;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    border: 5px solid var(--Secondary-color);
+    border-bottom: none;
+}
+
+
+/* End main  */
+
+
+/* Start Default value books  */
+
+div#books {
+    position: absolute;
+    right: 50%;
+    top: 95%;
+}
+
+.container-book {
+    width: 300px;
+    height: 300px;
+    perspective: 900px;
+}
+
+.book {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: 1s;
+    transition-delay: 0.2s;
+}
+
+.book .moustafa {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    backface-visibility: hidden;
+    line-height: 30px;
+    background-color: var(--background-main-color);
+    border-radius: 10px;
+    border: 15px solid var(--Secondary-color);
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+button.Download-book {
+    font-size: 30px;
+    outline: none;
+    background-color: #54a099;
+    padding: 10px;
+    border: 2px solid var(--Secondary-color);
+    border-radius: 10px;
+    visibility: hidden;
+    font-family: "Tajawal", sans-serif;
+    transition-delay: 0.5s;
+}
+
+button.Download-book.Reading {
+    position: relative;
+    right: 205px;
+    top: 27px;
+}
+
+.Download-book.Download {
+    position: relative;
+    top: 27px;
+    left: 90px;
+}
+
+button.Download-book::before {
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--Secondary-color) transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 42px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+/* End Default value books  */
+
+
+/* Start book Sports-Forty */
+
+.moustafa.text-book.Sports-Forty {
+    transform: rotateY(180deg);
+}
+
+.book.Sports-Forty:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Sports-Forty:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Sports-Forty */
+
+
+/* Start book Psychological-Fragility */
+
+.moustafa.text-book.psychological-fragility {
+    transform: rotateY(180deg);
+}
+
+.book.psychological-fragility:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.psychological-fragility:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Psychological-Fragility */
+
+
+/* Start book How-to-tickets */
+
+.moustafa.text-book.How-to-tickets {
+    transform: rotateY(180deg);
+}
+
+.book.How-to-tickets:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.How-to-tickets:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book How-to-tickets */
+
+
+/* Start book Atheist-Militia  */
+
+.moustafa.text-book.Atheist-Militia {
+    transform: rotateY(180deg);
+}
+
+.book.Atheist-Militia:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Atheist-Militia:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Atheist-Militia  */
+
+
+/* Start book Why-are-we-here */
+
+.moustafa.text-book.Why-are-we-here {
+    transform: rotateY(180deg);
+}
+
+.book.Why-are-we-here:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Why-are-we-here:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Why-are-we-here */
+
+
+/* Start book Time-management-between-heritage-and-contemporary */
+
+.moustafa.text-book.Time-management-between-heritage-and-contemporary {
+    transform: rotateY(180deg);
+}
+
+.book.Time-management-between-heritage-and-contemporary:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Time-management-between-heritage-and-contemporary:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Time-management-between-heritage-and-contemporary */
+
+
+/* Start book Who-Moved-MyCheese */
+
+.moustafa.text-book.Who-Moved-MyCheese {
+    transform: rotateY(180deg);
+}
+
+.book.Who-Moved-MyCheese:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Who-Moved-MyCheese:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Who-Moved-MyCheese */
+
+
+/* Start book The-way-to-the-Quran */
+
+.moustafa.text-book.The-way-to-the-Quran {
+    transform: rotateY(180deg);
+}
+
+.book.The-way-to-the-Quran:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.The-way-to-the-Quran:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book The-way-to-the-Quran */
+
+
+/* Start book Theory-Pistachio */
+
+.moustafa.text-book.Theory-pistachio {
+    transform: rotateY(180deg);
+}
+
+.book.Theory-pistachio:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Theory-pistachio:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Theory-pistachio */
+
+
+/* Start book Fun-Instruction */
+
+.moustafa.text-book.Fun-instruction {
+    transform: rotateY(180deg);
+}
+
+.book.Fun-instruction:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Fun-instruction:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Fun-Instruction */
+
+
+/* Start book Soluble */
+
+.moustafa.text-book.Soluble {
+    transform: rotateY(180deg);
+}
+
+.book.Soluble:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Soluble:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Soluble */
+
+
+/* Start book I-missed-me-prayer */
+
+.moustafa.text-book.I-missed-me-prayer {
+    transform: rotateY(180deg);
+}
+
+.book.I-missed-me-prayer:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.I-missed-me-prayer:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book I-missed-me-prayer */
+
+
+/* Start book Interpretation-Quran-Great-for-Ibn-Many */
+
+.moustafa.text-book.Interpretation-Quran-Great-for-Ibn-Many {
+    transform: rotateY(180deg);
+}
+
+.book.Interpretation-Quran-Great-for-Ibn-Many:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Interpretation-Quran-Great-for-Ibn-Many:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Interpretation-Quran-Great-for-Ibn-Many */
+
+
+/* Start book My-Trip-From-doubt-To-Faith */
+
+.moustafa.text-book.My-Trip-From-doubt-To-Faith {
+    transform: rotateY(180deg);
+}
+
+.book.My-Trip-From-doubt-To-Faith:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.My-Trip-From-doubt-To-Faith:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book My-Trip-From-doubt-To-Faith */
+
+
+/* Start book Twenty-first-century-economy */
+
+.moustafa.text-book.Twenty-first-century-economy {
+    transform: rotateY(180deg);
+}
+
+.book.Twenty-first-century-economy:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Twenty-first-century-economy:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Twenty-first-century-economy */
+
+
+/* Start book Rich-Dad-and-Poor-Dad */
+
+.moustafa.text-book.Rich-Dad-and-Poor-Dad {
+    transform: rotateY(180deg);
+}
+
+.book.Rich-Dad-and-Poor-Dad:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Rich-Dad-and-Poor-Dad:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Rich-Dad-and-Poor-Dad */
+
+
+/* Start book Business-in-the-21st-century */
+
+.moustafa.text-book.Business-in-the-21st-century {
+    transform: rotateY(180deg);
+}
+
+.book.Business-in-the-21st-century:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Business-in-the-21st-century:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Business-in-the-21st-century */
+
+
+/* Start book The-Four-Way-cash-Flow-Model */
+
+.moustafa.text-book.The-Four-Way-cash-Flow-Model {
+    transform: rotateY(180deg);
+}
+
+.book.The-Four-Way-cash-Flow-Model:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.The-Four-Way-cash-Flow-Model:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book The-Four-Way-cash-Flow-Model */
+
+
+/* Start book First-20-hours */
+
+.moustafa.text-book.First-20-hours {
+    transform: rotateY(180deg);
+}
+
+.book.First-20-hours:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.First-20-hours:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book First-20-hours */
+
+
+/* Start book One-Minute-Bayaa */
+
+.moustafa.text-book.One-Minute-Bayaa {
+    transform: rotateY(180deg);
+}
+
+.book.One-Minute-Bayaa:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.One-Minute-Bayaa:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book One-Minute-Bayaa */
+
+
+/* Start book The-Rich-Dads-Investment-Guide */
+
+.moustafa.text-book.The-Rich-Dads-Investment-Guide {
+    transform: rotateY(180deg);
+}
+
+.book.The-Rich-Dads-Investment-Guide:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.The-Rich-Dads-Investment-Guide:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book The-Rich-Dads-Investment-Guide */
+
+
+/* Start book Because-you-are-God */
+
+.moustafa.text-book.Because-you-are-God {
+    transform: rotateY(180deg);
+}
+
+.book.Because-you-are-God:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.Because-you-are-God:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book Because-you-are-God */
+
+
+/* Start book How-To-win-friends-and-influence-people */
+
+.moustafa.text-book.How-To-win-friends-and-influence-people {
+    transform: rotateY(180deg);
+}
+
+.book.How-To-win-friends-and-influence-people:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.How-To-win-friends-and-influence-people:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book How-To-win-friends-and-influence-people */
+
+
+/* Start book old-mans-heart */
+
+.moustafa.text-book.old-mans-heart {
+    transform: rotateY(180deg);
+}
+
+.book.old-mans-heart:hover {
+    transform: rotateY(-180deg);
+}
+
+.book.old-mans-heart:hover button.Download-book {
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+
+/* End book old-mans-heart */
+
+
+/* End main */
